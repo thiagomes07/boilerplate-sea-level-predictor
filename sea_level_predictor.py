@@ -4,6 +4,7 @@ from scipy.stats import linregress
 from sklearn.linear_model import LinearRegression
 import numpy as np
 
+# Predição usando regressão simples
 def draw_plot():
     # Leitura dos dados do arquivo CSV
     df = pd.read_csv('epa-sea-level.csv')
@@ -46,6 +47,7 @@ def draw_plot():
     # Retornar o eixo do gráfico para teste
     return plt.gca()
 
+
 # Predição usando o Scikit-Learn
 def draw_plot_sklearn():
     # Ler os dados do arquivo CSV
@@ -86,5 +88,3 @@ def draw_plot_sklearn():
     # Salvar o gráfico
     plt.savefig('sea_level_plot_sklearn.png')
     return plt.gca()
-
-draw_plot_sklearn() # Gerar a imagem do gráfico
